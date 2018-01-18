@@ -3,9 +3,6 @@ import paramiko
 import sys
 import os
 
-FILEPATH = '/home/developer/develop/Projects/libs(backup)/'
-
-
 class Directory:
 
     def __init__(self, path):
@@ -42,9 +39,3 @@ class Directory:
     def isUpdated(self):
         return self.hashList != self.load()
 
-
-dir = Directory(FILEPATH)
-dir.update()
-while True:
-    if dir.isUpdated():
-        print('Update')
